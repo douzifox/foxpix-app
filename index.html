@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>狐理狐图 · FoxPix</title>
 <style>
-  :root { --bg: #f8f5ef; --surface: #ffffff; --text: #4a3424; --sub: #826e5f; --primary: #e6965c; --line: #eee6da; }
+  :root { color-scheme: light dark; --bg: #f8f5ef; --surface: #ffffff; --text: #4a3424; --sub: #826e5f; --primary: #e6965c; --line: #eee6da; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 -apple-system, "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif; }
   main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
   h1 { font-size: 32px; margin: 0; }
@@ -15,6 +15,7 @@
   .q { font-weight: 600; margin: 0 0 4px; }
   a { color: var(--primary); }
   .en { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161412; --surface: #221f1c; --text: #ece4d8; --sub: #b3a494; --line: #3a342e; } }
 </style>
 </head>
 <body>
