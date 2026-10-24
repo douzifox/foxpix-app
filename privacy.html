@@ -24,7 +24,7 @@
 <main>
 
 <h1>狐理狐图 隐私政策</h1>
-<p class="sub">更新日期：2026 年 10 月 20 日 · 适用于 iOS App「狐理狐图」（com.douzifox.foxpix）及其自动填充扩展</p>
+<p class="sub">更新日期：2026 年 10 月 24 日 · 适用于 iOS App「狐理狐图」（com.douzifox.foxpix）及其自动填充扩展</p>
 
 <div class="card">
   <p class="key">一句话：你的截图、照片和保险箱里的东西，不出你的手机。</p>
@@ -36,10 +36,12 @@
 
 <h2>App 在你手机上处理哪些数据</h2>
 <ul>
-  <li><strong>截图和照片</strong>：用 Apple 的 Vision 框架在本机识别文字、二维码和人脸，按规则分类。识别结果只存在本机的 App 数据库里，用于显示分类和「为什么是隐私」。</li>
+  <li><strong>截图和照片</strong>：用 Apple 的 Vision 框架和 App 自带的看图模型在本机识别文字、二维码、人脸和画面内容，按规则分类。识别结果只存在本机的 App 数据库里，用于显示分类和「为什么是隐私」。</li>
   <li><strong>保险箱</strong>：你存进保险箱的卡号、账号密码、证件、地址等，以条目形式存在 iOS 系统钥匙串（Keychain）里，由系统加密。打开保险箱、查看隐藏字段需要 Face ID / Touch ID 或设备密码。</li>
   <li><strong>手帐</strong>：只记累计的张数、释放的空间和到达里程碑的日期，不记任何截图内容或保险箱内容。</li>
   <li><strong>剪贴板</strong>：从保险箱复制的内容只放纯文字，只能在这台设备上粘贴（不走「通用剪贴板」），到你设定的时间（30 秒到 2 分钟）由系统自动清空。</li>
+  <li><strong>敲两下背面（快捷指令）</strong>：你自己装上并触发时，快捷指令把当前屏幕画面交给 App，在本机识别后存进保险箱；这张画面不存进相册，也不保留在 App 里。</li>
+  <li><strong>导入和导出保险箱</strong>：从别的密码 App 导出的 CSV / JSON 文件在本机读取，App 不保留原文件。导出时生成的文件是明文，存到哪里由你选；导进别的密码 App 后请把文件删掉。</li>
 </ul>
 
 <h2>App 为什么要这些权限</h2>
@@ -47,6 +49,7 @@
   <li><strong>照片图库（完整访问）</strong>：读取截图和照片来识别、分类；把你收藏的照片放进相簿；在你点「应用」并确认系统弹窗后删除你选择丢弃的照片。没有完整访问权限，App 找不到所有截图。</li>
   <li><strong>Face ID / Touch ID</strong>：打开 App（可在设置里关闭）和打开保险箱时验证是你本人。生物特征数据由 iOS 保管，App 接触不到。</li>
   <li><strong>后台处理</strong>：扫描没做完时，退到后台继续做；「空闲时扫全相册」是设置里的开关，默认关。</li>
+  <li><strong>运动传感器</strong>：「屏幕朝下就锁上」开着时，App 在前台用它判断手机是不是扣在桌上，只在本机即时判断，不记录。这项不需要单独授权，可在设置里关闭。</li>
 </ul>
 
 <h2>网络</h2>
@@ -58,7 +61,7 @@
 </ul>
 
 <h2>自动填充扩展</h2>
-<p>在系统设置里启用后，登录框上方会出现狐理狐图的建议。填入前必须通过 Face ID / Touch ID 或设备密码。扩展只读取你保险箱里的条目，不记录你在哪些网站或 App 里使用了它。</p>
+<p>在系统设置里启用后，登录框上方会出现狐理狐图的建议，可以填账号密码和验证码；iOS 18 起，任意输入框长按 →「自动填充」还能插入保险箱里的地址、卡号等。填入前必须通过 Face ID / Touch ID 或设备密码。扩展只读取你保险箱里的条目，不记录你在哪些网站或 App 里使用了它。</p>
 
 <h2>数据保留与删除</h2>
 <ul>
@@ -80,7 +83,7 @@
 
 <div class="en" lang="en">
 <h1>FoxPix Privacy Policy</h1>
-<p class="sub">Updated October 20, 2026 · Applies to the iOS app FoxPix (com.douzifox.foxpix) and its AutoFill extension</p>
+<p class="sub">Updated October 24, 2026 · Applies to the iOS app FoxPix (com.douzifox.foxpix) and its AutoFill extension</p>
 
 <div class="card">
   <p class="key">In one line: your screenshots, photos and vault never leave your phone.</p>
@@ -92,10 +95,12 @@
 
 <h2>What the app processes on your device</h2>
 <ul>
-  <li><strong>Screenshots and photos</strong>: recognized on-device with Apple's Vision framework (text, QR codes, faces) and sorted by rules. Results are stored only in the app's local database, to show categories and the reason behind them.</li>
+  <li><strong>Screenshots and photos</strong>: recognized on-device with Apple's Vision framework and an image model built into the app (text, QR codes, faces, what the picture shows) and sorted by rules. Results are stored only in the app's local database, to show categories and the reason behind them.</li>
   <li><strong>Vault</strong>: cards, logins, IDs, addresses and other items you save are stored as entries in the iOS Keychain, encrypted by the system. Opening the vault or revealing a hidden field requires Face ID / Touch ID or your device passcode.</li>
   <li><strong>Journal</strong>: only running totals (photos sorted, space freed) and milestone dates. Never the content of a screenshot or a vault item.</li>
   <li><strong>Clipboard</strong>: items copied from the vault are plain text, local to this device (no Universal Clipboard), and cleared by the system after the time you choose (30 seconds to 2 minutes).</li>
+  <li><strong>Back Tap (Shortcuts)</strong>: when you install and trigger the shortcut, it hands the current screen to the app, which reads it on-device and saves the result to the vault. The screen image is not saved to Photos or kept by the app.</li>
+  <li><strong>Vault import and export</strong>: CSV / JSON files exported from other password apps are read on-device; the app does not keep the original file. Exported files are plain text and saved wherever you choose; delete them after importing into another password app.</li>
 </ul>
 
 <h2>Why the app asks for permissions</h2>
@@ -103,6 +108,7 @@
   <li><strong>Photos (full access)</strong>: to read screenshots and photos for recognition, to add kept photos to albums, and to delete the photos you chose to discard, always after you tap Apply and confirm the system dialog. Without full access the app cannot find all screenshots.</li>
   <li><strong>Face ID / Touch ID</strong>: to confirm it is you when opening the app (optional) and the vault. Biometric data is handled by iOS; the app never sees it.</li>
   <li><strong>Background processing</strong>: to finish a scan after you leave the app; "scan the library when idle" is an opt-in switch, off by default.</li>
+  <li><strong>Motion sensor</strong>: with "Lock when face down" on, the app uses it while open to tell whether the phone is lying face down. This is decided on the spot and never recorded. It needs no separate permission and can be turned off in Settings.</li>
 </ul>
 
 <h2>Network</h2>
@@ -114,7 +120,7 @@
 </ul>
 
 <h2>AutoFill extension</h2>
-<p>Once enabled in iOS Settings, FoxPix suggestions appear above login fields. Filling requires Face ID / Touch ID or your passcode. The extension only reads your vault items and keeps no record of where you used them.</p>
+<p>Once enabled in iOS Settings, FoxPix suggestions appear above login fields for accounts, passwords and verification codes; on iOS 18 and later you can also long-press any text field → AutoFill to insert an address, card number or other vault item. Filling requires Face ID / Touch ID or your passcode. The extension only reads your vault items and keeps no record of where you used them.</p>
 
 <h2>Retention and deletion</h2>
 <ul>
