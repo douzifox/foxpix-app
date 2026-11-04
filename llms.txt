@@ -14,6 +14,6 @@
 ## Links
 
 - [App Store](https://apps.apple.com/app/id6821953556)
-- [Website and FAQ (Chinese and English)](https://douzifox.github.io/foxpix-app/)
-- [Privacy policy](https://douzifox.github.io/foxpix-app/privacy.html)
+- [Website and FAQ (Chinese and English)](https://foxpix.douzifox.com/)
+- [Privacy policy](https://foxpix.douzifox.com/privacy.html)
 - Contact: douzifox@gmail.com
