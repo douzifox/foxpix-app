@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>狐理狐图 FoxPix：iPhone 截图整理与隐私保险箱</title>
-<meta name="description" content="狐理狐图（FoxPix）是一款 iPhone App：在手机上识别并整理截图，找出相册里的身份证、银行卡、账号密码，锁进只有你能打开的保险箱，登录时自动填充。全程本机完成，不上传。FoxPix is an iPhone app that sorts screenshots on the phone and keeps IDs, cards and logins in a Face ID vault.">
+<meta name="description" content="狐理狐图（FoxPix）是一款 iPhone App：在手机上识别并整理截图，找出相册里的身份证、银行卡、账号密码，锁进要面容 ID 或锁屏密码才能打开的保险箱，登录时自动填充。识字和分类全在手机上完成，截图不上传。FoxPix is an iPhone app that sorts screenshots on the phone and keeps IDs, cards and logins in a vault that opens with Face ID or your passcode.">
 <link rel="canonical" href="https://foxpix.douzifox.com/">
 <link rel="alternate" hreflang="zh-Hans" href="https://foxpix.douzifox.com/">
 <link rel="alternate" hreflang="en" href="https://foxpix.douzifox.com/en/">
@@ -12,7 +12,7 @@
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="狐理狐图 FoxPix：把相册里的隐私收好 · Take the private stuff out of your camera roll">
-<meta property="og:description" content="整理截图，找出证件、银行卡和密码，锁进只有你能打开的保险箱，全在手机上完成。Sorts screenshots and locks IDs, cards and logins in a vault, all on your iPhone.">
+<meta property="og:description" content="整理截图，找出证件、银行卡和密码，锁进要面容 ID 或锁屏密码才能打开的保险箱；识字和分类全在手机上完成。Sorts screenshots on your iPhone and locks IDs, cards and logins in a vault.">
 <meta property="og:url" content="https://foxpix.douzifox.com/">
 <meta property="og:image" content="https://foxpix.douzifox.com/assets/og-share.png">
 <meta property="og:image:width" content="1200">
@@ -148,8 +148,8 @@
     <div>
       <h1 class="zh" lang="zh-Hans">把相册里的隐私，<br>收好。</h1>
       <h1 class="en" lang="en">Take the private stuff <br>out of your camera roll.</h1>
-      <p class="lead zh" lang="zh-Hans">狐理狐图（FoxPix）是一款 iPhone App。它帮你整理截图，找出里面的证件、银行卡和账号密码，锁进只有你能打开的保险箱，登录时还能自动填充。全在手机上完成，不上传。</p>
-      <p class="lead en" lang="en">FoxPix (狐理狐图) is an iPhone app. It sorts your screenshots and finds the IDs, bank cards and logins hiding in them. Lock them in a vault only you can open, with AutoFill when you sign in. Everything happens on your phone. Nothing is uploaded.</p>
+      <p class="lead zh" lang="zh-Hans">狐理狐图（FoxPix）是一款 iPhone App。它帮你整理截图，找出里面的证件、银行卡和账号密码，锁进要面容 ID 或锁屏密码才能打开的保险箱，登录时还能自动填充。识字和分类全在手机上完成，截图不上传。</p>
+      <p class="lead en" lang="en">FoxPix (狐理狐图) is an iPhone app. It sorts your screenshots and finds the IDs, bank cards and logins hiding in them. Lock them in a vault that opens only with Face ID or your passcode, with AutoFill when you sign in. Recognition and sorting happen on your phone, and your screenshots are never uploaded.</p>
       <div class="download">
         <div class="qr">
           <img class="zh" src="assets/qr-appstore-cn.png" alt="App Store 下载二维码">
@@ -319,6 +319,10 @@
     <div class="card en" lang="en"><p class="q">Why full photo access?</p><p>Only full access can find every screenshot and delete the ones you discard. Deletion always happens after you tap Apply and confirm the system dialog; deleted photos stay in Recently Deleted for 30 days.</p></div>
     <div class="card zh" lang="zh-Hans"><p class="q">保险箱的东西存在哪？</p><p>iOS 系统钥匙串。默认随你的 Apple 账户在你的设备间同步（端到端加密），设置里能关。</p></div>
     <div class="card en" lang="en"><p class="q">Where are vault items stored?</p><p>In the iOS Keychain. They sync between your own devices through iCloud Keychain (end-to-end encrypted) by default; you can turn that off in Settings.</p></div>
+    <div class="card zh" lang="zh-Hans"><p class="q">识出来的字存在哪？会进备份吗？</p><p>存在 App 自己的数据库里，只在这台手机上，用来分类和一键存进保险箱。原图删掉以后，回到 App 时对应的记录会一起清掉（全相册里的照片是打开「全相册」时清）。开着 iCloud 云备份的话，这个数据库会跟着手机一起备份；不想让它进备份，在「设置」→ 你的名字 →「iCloud」→「管理账户储存空间」→「备份」→ 这台 iPhone 里关掉「狐理狐图」就行。保险箱里的东西不在这个数据库里，在钥匙串里。</p></div>
+    <div class="card en" lang="en"><p class="q">Where is the recognized text stored? Is it backed up?</p><p>In the app's own database, only on this phone. It's used for sorting and for saving to the vault in one tap. Once a photo is deleted, its record is cleared the next time you return to the app (for Whole Library, when you open Whole Library). If iCloud Backup is on, this database is backed up with your phone; to leave it out, go to Settings → your name → iCloud → Manage Account Storage → Backups → this iPhone and turn off FoxPix. Vault items aren't in this database; they're in the Keychain.</p></div>
+    <div class="card zh" lang="zh-Hans"><p class="q">为什么会弹「允许使用数据」？选「不允许」还能用吗？</p><p>开了「优化 iPhone 存储」的话，有些照片的原图只在你的 iCloud 上。狐理狐图要看清这类照片，会请系统相册从 iCloud 把它取下来，这算 App 用了网络，所以国行 iPhone 会问一次。这是下载你自己的照片，不是上传。选「不允许」也照常能用，只是原图只在 iCloud 上的那些暂时识别不了。</p></div>
+    <div class="card en" lang="en"><p class="q">Why might iOS ask whether FoxPix can use data?</p><p>With Optimize iPhone Storage on, some originals live only in your iCloud. To read one of those, FoxPix asks the system photo library to download it, which counts as the app using the network, so iPhones sold in mainland China ask once. It downloads your own photo; nothing is uploaded. If you say no, everything still works except photos whose originals are only in iCloud.</p></div>
     <div class="card zh" lang="zh-Hans"><p class="q">自动填充怎么开？</p><p>系统设置 → 密码 → 密码选项（或「自动填充密码和通行密钥」）→ 勾上「狐理狐图」。之后登录框上方会出现狐豆豆的建议，解锁就填。</p></div>
     <div class="card en" lang="en"><p class="q">How do I enable AutoFill?</p><p>iOS Settings → Passwords → Password Options (or AutoFill Passwords and Passkeys) → turn on FoxPix. Suggestions then appear above login fields; unlock to fill.</p></div>
     <div class="card zh" lang="zh-Hans"><p class="q">能导入哪些密码文件？</p><p>保险箱 → + → 「从文件导入」，选别的密码 App 导出的 CSV：苹果「密码」、1Password、Bitwarden、Chrome、Edge、Firefox 都认，别的只要有标题、网址、账号、密码几列也能读。导完记得把文件删掉，导入页上有按钮。</p></div>

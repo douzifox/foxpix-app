@@ -15,7 +15,7 @@ PAGES = {
         path="",
         title="FoxPix: screenshot organizer and private vault for iPhone",
         og_title="FoxPix: Take the private stuff out of your camera roll",
-        og_desc="Sorts your screenshots, finds IDs, bank cards and logins in them, and locks them in a vault only you can open. All on your iPhone, nothing uploaded.",
+        og_desc="Sorts your screenshots, finds IDs, bank cards and logins in them, and locks them in a vault that opens with Face ID or your passcode. Recognition runs on your iPhone; screenshots are never uploaded.",
     ),
     "qa.html": dict(
         path="qa.html",

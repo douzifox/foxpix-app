@@ -1,8 +1,8 @@
 # 狐理狐图 (FoxPix)
 
-> An iPhone app that sorts screenshots, finds photos of IDs and bank cards in the camera roll, and keeps logins and card numbers in a vault unlocked with Face ID. Everything runs on the phone: no account, no server, nothing uploaded. Free to download, no subscription. An optional one-time in-app purchase unlocks unlimited use.
+> An iPhone app that sorts screenshots, finds photos of IDs and bank cards in the camera roll, and keeps logins and card numbers in a vault unlocked with Face ID or the device passcode. Text recognition and sorting run on the phone; screenshots are never uploaded; no account, no server. Free to download, no subscription. An optional one-time in-app purchase unlocks unlimited use.
 
-狐理狐图是一款 iPhone 截图整理与隐私保险箱 App：在手机上识别截图文字并分类、挑出该删的；翻全相册找出身份证、银行卡等隐私照片和重复照片；账号密码卡号存进保险箱，支持自动填充。全程本机完成，不上传，不用注册。免费下载，没有订阅；想用得更多，可以一次性解锁完整版。
+狐理狐图是一款 iPhone 截图整理与隐私保险箱 App：在手机上识别截图文字并分类、挑出该删的；翻全相册找出身份证、银行卡等隐私照片和重复照片；账号密码卡号存进保险箱，支持自动填充。识字和分类全在本机完成，截图不上传，不用注册。免费下载，没有订阅；想用得更多，可以一次性解锁完整版。
 
 - Platform: iPhone, iOS 17.0 or later
 - Languages: Simplified Chinese, English
