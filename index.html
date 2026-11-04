@@ -71,11 +71,12 @@
   .hero h1 { font-size: 46px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.5px; }
   .hero .lead { font-size: 19px; color: var(--sub); margin: 0 0 26px; }
   .hero .fox { justify-self: center; width: min(320px, 80%); filter: drop-shadow(0 16px 30px rgba(230, 150, 92, .28)); }
-  .download { display: flex; align-items: center; gap: 20px; }
+  .download { display: flex; align-items: center; gap: 40px; }
+  .get-wrap { display: flex; flex-direction: column; align-items: center; }
   .get { display: inline-flex; align-items: center; background: var(--primary); color: var(--primary-ink); text-decoration: none; font-weight: 600; padding: 13px 26px; border-radius: 999px; box-shadow: 0 8px 20px rgba(230, 150, 92, .35); }
   .qr { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--sub); font-size: 12px; }
   .qr img { width: 92px; height: 92px; border-radius: 12px; background: #fff; padding: 6px; border: 1px solid var(--line); image-rendering: pixelated; }
-  .note { font-size: 14px; color: var(--sub); margin-top: 12px; }
+  .note { font-size: 14px; color: var(--sub); margin: 10px 0 0; }
 
   section.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 56px 0; border-top: 1px solid var(--line); }
   section.feature.flip .text { order: 2; }
@@ -142,10 +143,12 @@
           <img class="en" src="assets/qr-appstore-us.png" alt="App Store QR code">
           <span><span class="zh">iPhone 扫码下载</span><span class="en">Scan with iPhone</span></span>
         </div>
-        <a class="get zh" href="https://apps.apple.com/cn/app/id6821953556" target="_blank" rel="noopener">在 App Store 下载</a>
-        <a class="get en" href="https://apps.apple.com/us/app/id6821953556" target="_blank" rel="noopener">Download on the App Store</a>
+        <div class="get-wrap">
+          <a class="get zh" href="https://apps.apple.com/cn/app/id6821953556" target="_blank" rel="noopener">在 App Store 下载</a>
+          <a class="get en" href="https://apps.apple.com/us/app/id6821953556" target="_blank" rel="noopener">Download on the App Store</a>
+          <p class="note"><span class="zh">iPhone · iOS 17 及以上</span><span class="en">iPhone · iOS 17 or later</span></p>
+        </div>
       </div>
-      <p class="note"><span class="zh">iPhone · iOS 17 及以上</span><span class="en">iPhone · iOS 17 or later</span></p>
     </div>
     <img class="fox" src="assets/fox.png" alt="狐豆豆 / Doudou the fox">
   </header>
