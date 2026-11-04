@@ -74,8 +74,9 @@
   .download { display: flex; align-items: center; gap: 40px; }
   .get-wrap { display: flex; flex-direction: column; align-items: center; }
   .get { display: inline-flex; align-items: center; background: var(--primary); color: var(--primary-ink); text-decoration: none; font-weight: 600; padding: 13px 26px; border-radius: 999px; box-shadow: 0 8px 20px rgba(230, 150, 92, .35); }
-  .qr { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--sub); font-size: 12px; }
-  .qr img { width: 92px; height: 92px; border-radius: 12px; background: #fff; padding: 6px; border: 1px solid var(--line); image-rendering: pixelated; }
+  /* 二维码用居中那版的大小（她 11-04：大小是说中间那版），放在下载按钮左边 */
+  .qr { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--sub); font-size: 14px; }
+  .qr img { width: 172px; height: 172px; border-radius: 18px; background: #fff; padding: 12px; border: 1px solid var(--line); box-shadow: var(--shadow); image-rendering: pixelated; }
   .note { font-size: 14px; color: var(--sub); margin: 10px 0 0; }
 
   section.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 56px 0; border-top: 1px solid var(--line); }
