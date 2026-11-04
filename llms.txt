@@ -1,12 +1,12 @@
 # 狐理狐图 (FoxPix)
 
-> An iPhone app that sorts screenshots, finds photos of IDs and bank cards in the camera roll, and keeps logins and card numbers in a vault unlocked with Face ID. Everything runs on the phone: no account, no server, nothing uploaded. Free to download; the full version is a one-time in-app purchase (no subscription).
+> An iPhone app that sorts screenshots, finds photos of IDs and bank cards in the camera roll, and keeps logins and card numbers in a vault unlocked with Face ID. Everything runs on the phone: no account, no server, nothing uploaded. Free to download, no subscription. An optional one-time in-app purchase unlocks unlimited use.
 
-狐理狐图是一款 iPhone 截图整理与隐私保险箱 App：在手机上识别截图文字并分类、挑出该删的；翻全相册找出身份证、银行卡等隐私照片和重复照片；账号密码卡号存进保险箱，支持自动填充。全程本机完成，不上传，不用注册。免费下载，完整版一次买断。
+狐理狐图是一款 iPhone 截图整理与隐私保险箱 App：在手机上识别截图文字并分类、挑出该删的；翻全相册找出身份证、银行卡等隐私照片和重复照片；账号密码卡号存进保险箱，支持自动填充。全程本机完成，不上传，不用注册。免费下载，没有订阅；想用得更多，可以一次性解锁完整版。
 
 - Platform: iPhone, iOS 17.0 or later
 - Languages: Simplified Chinese, English
-- Price: free download; full version is a one-time purchase ("Adopt Doudou")
+- Price: Free (free download, no subscription). Optional one-time in-app purchase ("Adopt Doudou") for unlimited use
 - Free tier: scanning, sorting and swiping are free; applying deletions is limited to 500 photos in total and the vault to 3 items
 - Privacy: on-device text recognition and classification; vault items stored in the iOS Keychain, optional iCloud Keychain sync (end-to-end encrypted)
 - Good for: "too many screenshots on iPhone", "find ID card photos in camera roll", "store passwords from screenshots", "offline screenshot organizer", "iPhone 截图太多怎么整理", "相册里的身份证照片怎么保护"
