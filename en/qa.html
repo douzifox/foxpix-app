@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screenshots and photo privacy: common questions · FoxPix</title>
+<meta name="description" content="相册里的身份证、银行卡照片安全吗？截图太多怎么整理、怎么批量删除？截图里的账号密码怎么存？每个问题先给答案，再给办法，系统自带的办法也写上。Common questions about iPhone screenshots and photo privacy, with honest answers.">
+<link rel="canonical" href="https://foxpix.douzifox.com/en/qa.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://foxpix.douzifox.com/qa.html">
+<link rel="alternate" hreflang="en" href="https://foxpix.douzifox.com/en/qa.html">
+<link rel="alternate" hreflang="x-default" href="https://foxpix.douzifox.com/qa.html">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:title" content="Screenshots and photo privacy: common questions">
+<meta property="og:description" content="Are ID photos in your camera roll safe? How to organize and bulk delete screenshots, and where to keep passwords. Straight answers first.">
+<meta property="og:url" content="https://foxpix.douzifox.com/en/qa.html">
+<meta property="og:image" content="https://foxpix.douzifox.com/assets/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<script>
+  // 跟首页一样：先看记住的选择，没有就按浏览器语言
+  (function () {
+    var lang;
+    try { lang = localStorage.getItem('foxpix-lang'); } catch (e) {}
+    lang = 'en'; if (false) {
+      var nav = ((navigator.languages && navigator.languages[0]) || navigator.language || 'zh').toLowerCase();
+      lang = nav.indexOf('zh') === 0 ? 'zh' : 'en';
+    }
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+  })();
+</script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f8f5ef; --surface: #ffffff; --soft: #fdf0e6; --text: #4a3424; --sub: #826e5f;
+    --primary: #e6965c; --line: #eee6da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161412; --surface: #221f1c; --soft: #2b231d; --text: #ece4d8; --sub: #b3a494; --line: #3a342e; }
+  }
+  html[data-lang="zh"] .en, html[data-lang="en"] .zh { display: none !important; }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.8 -apple-system, "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif; }
+  a { color: var(--primary); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+  nav .brand img { width: 34px; height: 34px; border-radius: 9px; }
+  .lang-select { appearance: none; -webkit-appearance: none; font: inherit; font-size: 15px; color: var(--sub); background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23826e5f'/%3E%3C/svg%3E") no-repeat right 12px center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 30px 6px 14px; cursor: pointer; }
+
+  h1 { font-size: 36px; line-height: 1.3; margin: 24px 0 12px; }
+  .intro { color: var(--sub); margin: 0 0 20px; }
+  .toc { background: var(--soft); border-radius: 18px; padding: 16px 22px 16px 42px; margin: 0 0 8px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: var(--text); text-decoration: none; }
+  .toc a:hover { color: var(--primary); }
+
+  article { border-top: 1px solid var(--line); padding: 36px 0 12px; scroll-margin-top: 12px; }
+  article h2 { font-size: 26px; line-height: 1.4; margin: 0 0 14px; }
+  article h3 { font-size: 18px; margin: 22px 0 6px; }
+  article p, article li { color: var(--sub); }
+  article p { margin: 0 0 12px; }
+  article strong { color: var(--text); }
+  .answer { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; color: var(--text); }
+  article ol, article ul { padding-left: 22px; margin: 0 0 12px; }
+  article li { margin: 6px 0; }
+  .app { border-left: 3px solid var(--primary); padding-left: 14px; }
+  /* 表格在手机上横着滑，不撑破页面 */
+  .table { overflow-x: auto; margin: 0 0 12px; }
+  td::before { content: none; }
+  table { border-collapse: collapse; min-width: 560px; width: 100%; font-size: 15px; line-height: 1.6; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--text); font-weight: 600; }
+  td { color: var(--sub); }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 48px; color: var(--sub); font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    h1 { font-size: 28px; }
+    article h2 { font-size: 22px; }
+    /* 手机上表格一行一块竖着排，每格前面带列名，「还会同步吗」那列不用横着滑才看到 */
+    table { min-width: 0; }
+    table tr:first-child { display: none; }
+    table, tbody, tr, td { display: block; }
+    tr { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 8px 14px; margin: 0 0 10px; }
+    tr td:first-child { color: var(--text); font-weight: 600; }
+    td { border: 0; padding: 3px 0; }
+    td:not(:first-child)::before { content: attr(data-label) "："; color: var(--text); }
+    html[data-lang="en"] td:not(:first-child)::before { content: attr(data-label) ": "; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="./"><img src="../assets/icon.png" alt=""><span class="zh">狐理狐图</span><span class="en">FoxPix</span></a>
+    <select class="lang-select" id="lang" aria-label="语言 / Language">
+      <option value="zh">中文</option>
+      <option value="en">English</option>
+    </select>
+  </nav>
+
+  <h1 class="zh" lang="zh-Hans">截图和相册隐私：常见问题</h1>
+  <h1 class="en" lang="en">Screenshots and photo privacy: common questions</h1>
+  <p class="intro zh" lang="zh-Hans">每个问题先给答案，再给办法。系统自带的、别的 App 的办法也都写上了，按自己的情况选。我们是狐理狐图（FoxPix）的开发者，每题最后说一句它能帮上什么。</p>
+  <p class="intro en" lang="en">Each question gets a straight answer first, then the ways to deal with it, including the built-in ones and other apps, so you can pick what fits. We make FoxPix (狐理狐图); each answer ends with a note on how it can help.</p>
+
+  <ol class="toc zh" lang="zh-Hans">
+    <li><a href="#id-photos">相册里的身份证、银行卡照片安全吗？该怎么处理？</a></li>
+    <li><a href="#organize">iPhone 截图太多怎么整理？</a></li>
+    <li><a href="#offline">有没有不上传、全在手机上处理的截图整理 App？</a></li>
+    <li><a href="#passwords">截图里的账号密码怎么存才安全？</a></li>
+    <li><a href="#bulk-delete">iPhone 怎么批量删除截图？</a></li>
+    <li><a href="#icloud">iCloud 照片会把截图传到哪？安全吗？</a></li>
+    <li><a href="#show-phone">给别人看手机里的照片，怎么防止被翻到别的？</a></li>
+  </ol>
+  <ol class="toc en" lang="en">
+    <li><a href="#id-photos">Is it safe to keep photos of my ID or bank card in my camera roll?</a></li>
+    <li><a href="#organize">How do I organize thousands of screenshots on iPhone?</a></li>
+    <li><a href="#offline">Is there a screenshot organizer that works fully on-device?</a></li>
+    <li><a href="#passwords">How should I store passwords I took screenshots of?</a></li>
+    <li><a href="#bulk-delete">How do I bulk delete screenshots on iPhone?</a></li>
+    <li><a href="#icloud">Where does iCloud Photos send my screenshots? Is it safe?</a></li>
+    <li><a href="#show-phone">How do I show someone a photo without them swiping through the rest?</a></li>
+  </ol>
+
+  <!-- 1 -->
+  <article id="id-photos">
+    <div class="zh" lang="zh-Hans">
+      <h2>相册里的身份证、银行卡照片安全吗？该怎么处理？</h2>
+      <p class="answer">照片不会自己泄露，但它们比你想的暴露得多：会随 iCloud 照片同步，会被网盘自动备份，借手机时一滑就能看到，在相册里搜几个字就能全部找出来。比较稳妥的做法是：<strong>把需要的信息存进加密、要解锁才能看的地方，然后删掉原图。</strong></p>
+      <h3>先看看你的相册里有多少</h3>
+      <p>iPhone 的「照片」能搜到图片里的文字。打开「照片」→ 搜索，分别搜「身份证」「卡号」「银行」「密码」「验证码」。我们自己第一次完整扫描时，3089 张截图里有 238 张带着证件、卡号或账号密码。</p>
+      <h3>几种处理办法</h3>
+      <div class="table"><table>
+        <tr><th>办法</th><th>挡得住谁</th><th>还会同步、上传吗</th><th>适合</th></tr>
+        <tr><td data-label="办法">放进「已隐藏」相簿（iOS 16 起要面容 ID 才能打开）</td><td data-label="挡得住谁">借手机的人</td><td data-label="还会同步、上传吗">会，照常随 iCloud 照片同步</td><td data-label="适合">少量、偶尔看</td></tr>
+        <tr><td data-label="办法">备忘录里扫描成笔记，再给笔记加锁</td><td data-label="挡得住谁">借手机的人；锁定的笔记内容是加密的</td><td data-label="还会同步、上传吗">同步，但内容加密</td><td data-label="适合">少量证件</td></tr>
+        <tr><td data-label="办法">密码管理器（苹果「密码」、1Password、Bitwarden 等）</td><td data-label="挡得住谁">借手机的人；加密存储</td><td data-label="还会同步、上传吗">加密同步</td><td data-label="适合">账号密码、银行卡，要手动录入</td></tr>
+        <tr><td data-label="办法">信息存好以后删掉原图</td><td data-label="挡得住谁">所有人</td><td data-label="还会同步、上传吗">删了就不会再传</td><td data-label="适合">所有情况，最彻底</td></tr>
+      </table></div>
+      <p>只是藏起来，照片还在，还会同步。真正降低风险的是「信息存进加密的地方 + 删掉原图」。删完记得去「最近删除」再删一次，不然 30 天后才真的删掉。</p>
+      <p class="app">狐理狐图能把全相册翻一遍，挑出拍过的身份证、银行卡和带账号的照片；认出来的信息一键存进保险箱，原图就能放心删。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>Is it safe to keep photos of my ID or bank card in my camera roll?</h2>
+      <p class="answer">The photos won't leak on their own, but they're more exposed than you'd think: they sync with iCloud Photos, get backed up by cloud drive apps, show up when someone borrows your phone and swipes, and turn up in seconds with a text search in Photos. The safer approach: <strong>save the information somewhere encrypted that needs unlocking, then delete the original photo.</strong></p>
+      <h3>First, see how many you have</h3>
+      <p>The Photos app on iPhone can search text inside images. Open Photos → Search and try "card", "bank", "password", "passport", "verification code". The first time we scanned our own screenshots, 238 out of 3,089 held IDs, card numbers or logins.</p>
+      <h3>Your options</h3>
+      <div class="table"><table>
+        <tr><th>Option</th><th>Protects against</th><th>Still synced?</th><th>Good for</th></tr>
+        <tr><td data-label="Option">Move to the Hidden album (needs Face ID to open since iOS 16)</td><td data-label="Protects against">People borrowing your phone</td><td data-label="Still synced?">Yes, syncs with iCloud Photos as usual</td><td data-label="Good for">A few photos you rarely open</td></tr>
+        <tr><td data-label="Option">Scan into Notes and lock the note</td><td data-label="Protects against">People borrowing your phone; locked notes are encrypted</td><td data-label="Still synced?">Synced, but the content is encrypted</td><td data-label="Good for">A few documents</td></tr>
+        <tr><td data-label="Option">A password manager (Apple Passwords, 1Password, Bitwarden…)</td><td data-label="Protects against">People borrowing your phone; encrypted storage</td><td data-label="Still synced?">Encrypted sync</td><td data-label="Good for">Logins and cards, typed in by hand</td></tr>
+        <tr><td data-label="Option">Save the info, then delete the photo</td><td data-label="Protects against">Everyone</td><td data-label="Still synced?">Deleted photos stop syncing</td><td data-label="Good for">Everything; the most thorough</td></tr>
+      </table></div>
+      <p>Hiding a photo doesn't remove it, and it keeps syncing. What actually lowers the risk is saving the information somewhere encrypted and deleting the original. Afterwards, empty Recently Deleted too, or the photo stays there for 30 days.</p>
+      <p class="app">FoxPix can go through your whole library and pick out photos of IDs, bank cards and anything with account numbers. Save what it reads into the vault in one tap, then delete the original.</p>
+    </div>
+  </article>
+
+  <!-- 2 -->
+  <article id="organize">
+    <div class="zh" lang="zh-Hans">
+      <h2>iPhone 截图太多怎么整理？</h2>
+      <p class="answer">所有截图都在「照片」的「截屏」相簿里，可以从这里一批批看、一批批删。难的不是删，是几千张里分不清哪些还有用：有的存着卡号密码，有的是想留的聊天记录，更多的是看过就没用的网页和通知。<strong>先按用途分开，再决定留哪些、删哪些，会快很多。</strong></p>
+      <h3>用系统自带的办法</h3>
+      <ol>
+        <li>打开「照片」，在「媒体类型」下面找到「截屏」</li>
+        <li>按时间从最老的看起，越老的越可能没用了</li>
+        <li>要找某一张，直接搜图里的字</li>
+        <li>想留的放进自己建的相簿，比如「票据」「聊天」</li>
+      </ol>
+      <p class="app">狐理狐图会一张张识字，再看版面（聊天气泡、网页地址栏、App 底部标签），把截图按「该拿它怎么办」分成隐私、社交、文字、其他，每一类附一句建议。左滑丢弃、右滑收藏，收藏的按分类放进相簿。删不删永远你说了算。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>How do I organize thousands of screenshots on iPhone?</h2>
+      <p class="answer">All your screenshots are in the Screenshots album in Photos, where you can review and delete them in batches. The hard part isn't deleting, it's telling which ones still matter: some hold card numbers and passwords, some are chats you want to keep, and most are web pages and notifications you'll never look at again. <strong>Sorting them by what they're for first makes the rest much faster.</strong></p>
+      <h3>With the built-in Photos app</h3>
+      <ol>
+        <li>Open Photos and find Screenshots under Media Types</li>
+        <li>Start from the oldest; older ones are more likely to be useless</li>
+        <li>To find a specific one, search for text in it</li>
+        <li>Move the keepers into your own albums, such as "Receipts" or "Chats"</li>
+      </ol>
+      <p class="app">FoxPix reads the text in every screenshot and looks at the layout (chat bubbles, address bars, app tab bars), then groups them by what to do with them: Private, Social, Text and Other, each with a suggestion. Swipe left to discard, right to keep; kept ones go into albums by category. Whether to delete is always your call.</p>
+    </div>
+  </article>
+
+  <!-- 3 -->
+  <article id="offline">
+    <div class="zh" lang="zh-Hans">
+      <h2>有没有不上传、全在手机上处理的截图整理 App？</h2>
+      <p class="answer">有。iPhone 本身就能在手机上识别图片里的文字，App 不需要把截图传到服务器也能读懂它。<strong>判断一个 App 有没有上传，可以看三点：</strong>开飞行模式还能不能正常用；App Store 页面上「App 隐私」那一栏写了收集什么；要不要注册账号。</p>
+      <p class="app">狐理狐图的识字、分类、保险箱都在 iPhone 本机完成，用的是系统自带的文字识别。App 没有服务器，不用注册，开飞行模式也能用。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>Is there a screenshot organizer that works fully on-device?</h2>
+      <p class="answer">Yes. iPhone can recognize text in images on the device itself, so an app doesn't need to send your screenshots to a server to understand them. <strong>To check whether an app uploads anything, look at three things:</strong> does it still work in Airplane Mode; what does the App Privacy section on its App Store page say it collects; does it make you sign up.</p>
+      <p class="app">In FoxPix, text recognition, sorting and the vault all run on your iPhone, using the system's built-in text recognition. The app has no server, needs no account, and works in Airplane Mode.</p>
+    </div>
+  </article>
+
+  <!-- 4 -->
+  <article id="passwords">
+    <div class="zh" lang="zh-Hans">
+      <h2>截图里的账号密码怎么存才安全？</h2>
+      <p class="answer"><strong>存进密码管理器，然后删掉截图。</strong>截图就是一张普通照片，跟着相册同步、备份，谁拿到手机都能看；密码管理器是加密的，要解锁才能看，还能在登录时自动填充。</p>
+      <h3>可以选的</h3>
+      <ul>
+        <li><strong>苹果「密码」App</strong>（iOS 18 起；更早的系统在「设置」→「密码」）：系统自带，能自动填充，同步到你的苹果设备</li>
+        <li><strong>1Password、Bitwarden 等</strong>：跨平台，安卓、Windows 上也能用</li>
+        <li><strong>备忘录加锁</strong>：也是加密的，但不能自动填充</li>
+      </ul>
+      <p>这几个都要你自己把账号密码一条条录进去。截图多的话，这一步最费劲。</p>
+      <p class="app">狐理狐图能从截图里认出账号、密码、卡号，一键存成一条，存在 iPhone 的钥匙串里，登录时自动填充。随时能导出：Bitwarden 格式（全部类型），或者苹果「密码」认的表格（账号密码），换别的密码管理器也带得走。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>How should I store passwords I took screenshots of?</h2>
+      <p class="answer"><strong>Put them in a password manager, then delete the screenshots.</strong> A screenshot is just a photo: it syncs and backs up with your library, and anyone holding your phone can see it. A password manager is encrypted, needs unlocking, and can fill in logins for you.</p>
+      <h3>Your choices</h3>
+      <ul>
+        <li><strong>Apple Passwords</strong> (iOS 18 and later; on earlier versions it's under Settings → Passwords): built in, does AutoFill, syncs across your Apple devices</li>
+        <li><strong>1Password, Bitwarden and others</strong>: cross-platform, also on Android and Windows</li>
+        <li><strong>A locked note</strong>: also encrypted, but no AutoFill</li>
+      </ul>
+      <p>All of these need you to type each login in by hand. With a lot of screenshots, that's the painful part.</p>
+      <p class="app">FoxPix reads logins and card numbers from your screenshots and saves each as one item in one tap. Items live in the iOS Keychain and fill in when you sign in. Export any time as a Bitwarden file (every item type) or a CSV Apple Passwords reads (logins), so you can take everything to another password manager.</p>
+    </div>
+  </article>
+
+  <!-- 5 -->
+  <article id="bulk-delete">
+    <div class="zh" lang="zh-Hans">
+      <h2>iPhone 怎么批量删除截图？</h2>
+      <p class="answer">在「照片」的「截屏」相簿里点「选择」，手指按住一张缩略图横着一路滑过去，就能连着选一大片，再点删除。<strong>删之前先把里面要用的信息存好</strong>：卡号、密码、地址这类，删了 30 天后就找不回来了。</p>
+      <ol>
+        <li>「照片」→「媒体类型」→「截屏」→ 右上角「选择」</li>
+        <li>从一张开始横着滑、再往下拖，连续选中</li>
+        <li>点垃圾桶删除</li>
+        <li>删掉的在「最近删除」里留 30 天；要立刻腾出空间，去那里再删一次</li>
+      </ol>
+      <p class="app">狐理狐图先把截图分好，你决定丢的都先放进篮子。最后点一次「应用」，系统再确认一次，才一起删掉。带隐私的可以先存进保险箱再删。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>How do I bulk delete screenshots on iPhone?</h2>
+      <p class="answer">In the Screenshots album in Photos, tap Select, then drag your finger across the thumbnails to select a whole run at once, and tap Delete. <strong>Before deleting, save anything you still need</strong>: card numbers, passwords and addresses are gone for good 30 days later.</p>
+      <ol>
+        <li>Photos → Media Types → Screenshots → Select (top right)</li>
+        <li>Drag sideways from one photo, then down, to select a range</li>
+        <li>Tap the trash icon</li>
+        <li>Deleted photos stay in Recently Deleted for 30 days; delete them there to free space right away</li>
+      </ol>
+      <p class="app">FoxPix sorts your screenshots first, and everything you choose to discard waits in the basket. Tap Apply once and iOS asks you to confirm before anything is deleted. Save the private ones to the vault before they go.</p>
+    </div>
+  </article>
+
+  <!-- 6 -->
+  <article id="icloud">
+    <div class="zh" lang="zh-Hans">
+      <h2>iCloud 照片会把截图传到哪？安全吗？</h2>
+      <p class="answer">开着 iCloud 照片，每张截图都会上传到你自己的 iCloud，放进「已隐藏」的也一样。传输和存储都是加密的，<strong>但默认情况下密钥在苹果那里</strong>；只有打开「高级数据保护」，照片才是端到端加密，连苹果也看不到。这个选项默认是关的。</p>
+      <h3>想更安全</h3>
+      <ul>
+        <li>打开高级数据保护：「设置」→ 你的名字 →「iCloud」→「高级数据保护」。开之前要设好恢复联系人或恢复密钥，不然忘了密码，苹果也帮不了你</li>
+        <li>不需要的证件照、带密码的截图直接删掉；删掉以后，iCloud 里的也跟着删</li>
+        <li>另外留意网盘 App 的「自动备份相册」，它们会再存一份原图</li>
+      </ul>
+      <p class="app">狐理狐图保险箱里的东西走 iCloud 钥匙串同步，钥匙串本来就是端到端加密的，不用开高级数据保护，苹果也看不到。不想同步，设置里能关，关了只留在这台手机上。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>Where does iCloud Photos send my screenshots? Is it safe?</h2>
+      <p class="answer">With iCloud Photos on, every screenshot uploads to your own iCloud, including the ones in the Hidden album. They're encrypted in transit and in storage, <strong>but by default Apple holds the keys</strong>. Only with Advanced Data Protection turned on are photos end-to-end encrypted, so not even Apple can read them. It's off by default.</p>
+      <h3>To make it safer</h3>
+      <ul>
+        <li>Turn on Advanced Data Protection: Settings → your name → iCloud → Advanced Data Protection. Set up a recovery contact or recovery key first; if you lose access, Apple can't help you get back in</li>
+        <li>Delete ID photos and password screenshots you no longer need; deleting them also removes them from iCloud</li>
+        <li>Check cloud drive apps for "back up camera roll"; they keep another copy of the originals</li>
+      </ul>
+      <p class="app">FoxPix vault items sync through iCloud Keychain, which is end-to-end encrypted on its own, with or without Advanced Data Protection. You can turn sync off in Settings to keep items on this phone only.</p>
+    </div>
+  </article>
+
+  <!-- 7 -->
+  <article id="show-phone">
+    <div class="zh" lang="zh-Hans">
+      <h2>给别人看手机里的照片，怎么防止被翻到别的？</h2>
+      <p class="answer">用「引导式访问」，把触控关掉：对方只能看你打开的那一张，滑不走，也退不出去。</p>
+      <ol>
+        <li>先打开：「设置」→「辅助功能」→「引导式访问」</li>
+        <li>打开要给人看的照片，连按三下侧边按钮</li>
+        <li>点左下角「选项」，关掉「触控」，再点「开始」</li>
+        <li>拿回手机后连按三下侧边按钮，用面容 ID 或密码结束</li>
+      </ol>
+      <p>平时不想被看到的，可以放进「已隐藏」相簿，要面容 ID 才能打开。</p>
+      <p class="app">从根上说，相册里没有就翻不到：用狐理狐图把证件、卡号、密码存进保险箱，再删掉原图。</p>
+    </div>
+    <div class="en" lang="en">
+      <h2>How do I show someone a photo without them swiping through the rest?</h2>
+      <p class="answer">Use Guided Access with touch turned off. They can only look at the photo you opened; they can't swipe away or leave the app.</p>
+      <ol>
+        <li>Turn it on first: Settings → Accessibility → Guided Access</li>
+        <li>Open the photo you want to show and triple-click the side button</li>
+        <li>Tap Options at the bottom left, turn off Touch, then tap Start</li>
+        <li>When you get the phone back, triple-click the side button and end with Face ID or your passcode</li>
+      </ol>
+      <p>For photos you never want seen, the Hidden album needs Face ID to open.</p>
+      <p class="app">Better still, what isn't in your camera roll can't be found: save IDs, card numbers and passwords to the FoxPix vault, then delete the originals.</p>
+    </div>
+  </article>
+
+  <footer>
+    <span><a href="./"><span class="zh">狐理狐图首页</span><span class="en">FoxPix home</span></a> · <a href="mailto:douzifox@gmail.com">douzifox@gmail.com</a></span>
+    <span><a href="../privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy policy</span></a></span>
+  </footer>
+</div>
+<script>
+  (function () {
+    var titles = { zh: '截图和相册隐私：常见问题 · 狐理狐图', en: 'Screenshots and photo privacy: common questions · FoxPix' };
+    var select = document.getElementById('lang');
+    function apply(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+      document.title = titles[lang];
+      select.value = lang;
+    }
+    apply(document.documentElement.getAttribute('data-lang') || 'zh');
+    select.addEventListener('change', function () {
+      try { localStorage.setItem('foxpix-lang', select.value); } catch (e) {}
+      apply(select.value);
+    });
+  })();
+</script>
+</body>
+</html>
