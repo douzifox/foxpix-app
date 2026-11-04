@@ -4,11 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>狐理狐图 FoxPix：iPhone 截图整理与隐私保险箱</title>
-<meta name="description" content="狐理狐图（FoxPix）是一款 iPhone App：在手机上识别并整理截图，找出相册里的身份证、银行卡等隐私照片，把账号密码存进解锁才能看的保险箱。全程本机完成，不上传。免费下载。">
-<link rel="canonical" href="https://douzifox.github.io/foxpix-app/">
-<meta property="og:title" content="狐理狐图 FoxPix：iPhone 截图整理与隐私保险箱">
-<meta property="og:description" content="在手机上整理截图、找出证件照、保险箱收好账号密码。不上传，免费下载。">
-<meta property="og:url" content="https://douzifox.github.io/foxpix-app/">
+<meta name="description" content="狐理狐图（FoxPix）是一款 iPhone App：在手机上识别并整理截图，找出相册里的身份证、银行卡、账号密码，锁进只有你能打开的保险箱，登录时自动填充。全程本机完成，不上传。">
+<link rel="canonical" href="https://foxpix.douzifox.com/">
+<link rel="alternate" hreflang="zh-Hans" href="https://foxpix.douzifox.com/">
+<link rel="alternate" hreflang="en" href="https://foxpix.douzifox.com/en/">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="狐理狐图 FoxPix：把相册里的隐私收好">
+<meta property="og:description" content="整理截图，找出证件、银行卡和密码，锁进只有你能打开的保险箱。全在手机上完成，不上传。">
+<meta property="og:url" content="https://foxpix.douzifox.com/">
+<meta property="og:image" content="https://foxpix.douzifox.com/assets/icon.png">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -18,69 +23,210 @@
   "alternateName": "FoxPix",
   "operatingSystem": "iOS 17.0 or later",
   "applicationCategory": "UtilitiesApplication",
-  "url": "https://douzifox.github.io/foxpix-app/",
+  "url": "https://foxpix.douzifox.com/",
   "downloadUrl": "https://apps.apple.com/app/id6821953556",
   "installUrl": "https://apps.apple.com/app/id6821953556",
+  "image": "https://foxpix.douzifox.com/assets/icon.png",
   "inLanguage": ["zh-Hans", "en"],
-  "description": "An iPhone app that sorts screenshots, finds photos of IDs and bank cards in the camera roll, and keeps logins and card numbers in a vault you unlock with Face ID. Everything runs on the phone; nothing is uploaded.",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download. The full version is a one-time in-app purchase." },
+  "description": "An iPhone app that sorts screenshots on the phone, finds photos of IDs, bank cards and logins in the camera roll, and keeps them in a vault you unlock with Face ID, with AutoFill on login fields. Everything runs on the phone; nothing is uploaded.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "author": { "@type": "Person", "name": "douzifox" }
 }
 </script>
 <style>
-  :root { color-scheme: light dark; --bg: #f8f5ef; --surface: #ffffff; --text: #4a3424; --sub: #826e5f; --primary: #e6965c; --line: #eee6da; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 -apple-system, "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-  h1 { font-size: 32px; margin: 0; }
-  h2 { font-size: 20px; margin: 36px 0 8px; }
-  .sub { color: var(--sub); margin: 4px 0 28px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; margin: 12px 0; }
-  .q { font-weight: 600; margin: 0 0 4px; }
+  :root {
+    color-scheme: light dark;
+    --bg: #f8f5ef; --surface: #ffffff; --soft: #fdf0e6; --text: #4a3424; --sub: #826e5f;
+    --primary: #e6965c; --primary-ink: #ffffff; --line: #eee6da; --shadow: 0 18px 40px rgba(90, 60, 40, .14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161412; --surface: #221f1c; --soft: #2b231d; --text: #ece4d8; --sub: #b3a494; --line: #3a342e; --shadow: 0 18px 40px rgba(0, 0, 0, .45); }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 -apple-system, "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif; }
   a { color: var(--primary); }
-  .get { display: inline-block; background: var(--primary); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 22px; border-radius: 999px; margin: 0 0 8px; }
-  .en { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
-  @media (prefers-color-scheme: dark) { :root { --bg: #161412; --surface: #221f1c; --text: #ece4d8; --sub: #b3a494; --line: #3a342e; } }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+  nav .brand img { width: 34px; height: 34px; border-radius: 9px; }
+  nav .lang { color: var(--sub); text-decoration: none; font-size: 15px; }
+
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding: 28px 0 56px; }
+  .hero h1 { font-size: 46px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.5px; }
+  .hero .lead { font-size: 19px; color: var(--sub); margin: 0 0 26px; }
+  .hero .fox { justify-self: center; width: min(320px, 80%); filter: drop-shadow(0 16px 30px rgba(230, 150, 92, .28)); }
+  .get { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: var(--primary-ink); text-decoration: none; font-weight: 600; padding: 13px 26px; border-radius: 999px; box-shadow: 0 8px 20px rgba(230, 150, 92, .35); }
+  .note { font-size: 14px; color: var(--sub); margin-top: 12px; }
+
+  section.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 56px 0; border-top: 1px solid var(--line); }
+  section.feature.flip .text { order: 2; }
+  .feature h2 { font-size: 32px; line-height: 1.3; margin: 0 0 14px; }
+  .feature p { margin: 0 0 12px; color: var(--sub); }
+  .feature p strong { color: var(--text); }
+  .phones { display: flex; justify-content: center; gap: 16px; }
+  .phone { width: min(280px, 100%); margin: 0 auto; border-radius: 34px; overflow: hidden; box-shadow: var(--shadow); border: 6px solid var(--surface); background: var(--surface); }
+  .phones .phone { width: min(230px, 48%); margin: 0; }
+  .caption { text-align: center; font-size: 13px; color: var(--sub); margin-top: 10px; }
+  .big-number { font-size: 56px; font-weight: 800; color: var(--primary); line-height: 1.1; margin: 8px 0 4px; }
+  ul.points { list-style: none; padding: 0; margin: 8px 0 0; }
+  ul.points li { position: relative; padding-left: 26px; margin: 8px 0; color: var(--sub); }
+  ul.points li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 9px; height: 9px; border-radius: 50%; background: var(--primary); }
+  .side-fox { width: min(260px, 70%); margin: 0 auto; }
+
+  .story { display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; background: var(--soft); border-radius: 28px; padding: 32px; margin: 56px 0; }
+  .story img { width: 180px; }
+  .story h2 { margin: 0 0 10px; font-size: 26px; }
+  .story p { margin: 0 0 10px; color: var(--sub); }
+
+  .faq h2 { font-size: 28px; margin: 0 0 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 22px; margin: 12px 0; }
+  .card .q { font-weight: 600; margin: 0 0 4px; }
+  .card p { margin: 0; color: var(--sub); }
+
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 28px 0 48px; color: var(--sub); font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .hero { grid-template-columns: 1fr; text-align: center; padding-top: 8px; }
+    .hero h1 { font-size: 34px; }
+    .hero .fox { order: -1; width: 200px; }
+    section.feature { grid-template-columns: 1fr; gap: 28px; padding: 44px 0; }
+    section.feature.flip .text { order: 0; }
+    .feature h2 { font-size: 26px; }
+    .story { grid-template-columns: 1fr; text-align: center; padding: 24px; }
+    .story img { width: 140px; margin: 0 auto; }
+  }
 </style>
 </head>
 <body>
-<main>
-<h1>狐理狐图 <span lang="en">FoxPix</span></h1>
-<p class="sub">把隐私从相册里拿出来，收好。整理截图、找出身份证银行卡、存进解锁才能看的保险箱。全在手机上完成。</p>
-<p>狐理狐图是一款 iPhone App（iOS 17 及以上）：在手机上识别截图里的文字并分好类，帮你挑出该删的；还能翻全相册，找出身份证、银行卡这类隐私照片，以及重复的照片；账号、密码、卡号存进保险箱，解锁才能看，登录时能自动填充。不需要注册，没有服务器，不上传任何图片或文字。免费下载，完整版一次买断。</p>
-<p><a class="get" href="https://apps.apple.com/app/id6821953556">在 App Store 下载</a></p>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="./"><img src="assets/icon.png" alt="">狐理狐图</a>
+    <a class="lang" href="en/" lang="en">English</a>
+  </nav>
 
-<div class="card"><p class="q">iPhone 截图太多，怎么整理？</p><p>打开狐理狐图点「扫描截图」，狐豆豆会在手机上读出每张截图的文字，分成账号与财务信息、聊天、购物快递、二维码、网页等类别。然后一张张滑：留着的收进对应相簿，不要的放进篮子，最后点「应用」一次删掉。删之前系统会再确认一次，删掉的在「最近删除」里留 30 天。</p></div>
-<div class="card"><p class="q">怎么找出相册里的身份证、银行卡照片？</p><p>切到顶上的「全相册」，狐豆豆会翻一遍所有照片，把拍过的证件、银行卡、带卡号或账号的图挑出来，也会找出重复的照片。要留的号码可以直接存进保险箱，原图再删掉。</p></div>
-<div class="card"><p class="q">跟 iPhone 自带的「照片」有什么不一样？</p><p>「照片」能搜到图里的字，但不会按用途把截图分好、帮你挑出该删的，也没有一个要解锁才能看的地方放证件和密码。狐理狐图专门做这几件事，而且全在手机上完成。</p></div>
+  <header class="hero">
+    <div>
+      <h1>把相册里的隐私，<br>收好。</h1>
+      <p class="lead">狐理狐图（FoxPix）是一款 iPhone App。它帮你整理截图，找出里面的证件、银行卡和账号密码，锁进只有你能打开的保险箱，登录时还能自动填充。全在手机上完成，不上传。</p>
+      <a class="get" href="https://apps.apple.com/app/id6821953556">
+        在 App Store 下载
+      </a>
+      <p class="note">iPhone · iOS 17 及以上</p>
+    </div>
+    <img class="fox" src="assets/fox.png" alt="狐豆豆，抱着小本子的橘色小狐狸">
+  </header>
 
-<div class="card"><p class="q">它会上传我的截图吗？</p><p>不会。识字、分类、保险箱都在手机上完成，App 没有服务器。开飞行模式也能用。详见<a href="privacy.html">隐私政策</a>。</p></div>
-<div class="card"><p class="q">为什么要「完整相册权限」？</p><p>只有完整权限才能找到所有截图、把丢弃的照片删掉。删除永远要你先点「应用」再确认系统弹窗，删掉的进「最近删除」，30 天内能找回。</p></div>
-<div class="card"><p class="q">保险箱的东西存在哪？</p><p>iOS 系统钥匙串。默认随你的 Apple 账户在你的设备间同步（端到端加密），设置里能关。</p></div>
-<div class="card"><p class="q">自动填充怎么开？</p><p>系统设置 → 密码 → 密码选项（或「自动填充密码和通行密钥」）→ 勾上「狐理狐图」。之后登录框上方会出现狐豆豆的建议，解锁就填。</p></div>
-<div class="card"><p class="q">免费能用多少？</p><p>扫描、分类、滑动整理、放篮子都免费；篮子「应用」累计 500 张、保险箱 3 条。「领养狐豆豆」一次买断，没有订阅，没有账号。换手机点「恢复购买」。</p></div>
-<div class="card"><p class="q">能导入哪些密码文件？</p><p>保险箱 → + → 「从文件导入」，选别的密码 App 导出的 CSV：苹果「密码」、1Password、Bitwarden、Chrome、Edge、Firefox 都认，别的只要有标题、网址、账号、密码几列也能读。导完记得把文件删掉，导入页上有按钮。</p></div>
-<div class="card"><p class="q">认错了怎么办？</p><p>截图详情页里能改分类；全相册里认错的照片点「不算隐私」，狐豆豆会记住。欢迎把认错的截图发到下面的邮箱，我们按它改规则。</p></div>
+  <section class="feature">
+    <div class="text">
+      <h2>你的相册里，<br>藏着多少隐私？</h2>
+      <p>要填的银行卡号、发给别人的收款账户、网站只显示一次的密钥……随手一截，就躺在相册里，再跟着相册同步到 iCloud 和各种云盘，原样存着，跟明文没什么两样。</p>
+      <p>狐理狐图的作者第一次扫自己的相册：</p>
+      <div class="big-number">238 / 3089</div>
+      <p><strong>3089 张截图里，有 238 张带着隐私。</strong></p>
+    </div>
+    <div>
+      <img class="phone" src="assets/shot-real-privacy.jpg" alt="狐理狐图主页，隐私分类下的截图网格，已打码">
+      <p class="caption">作者自己的截图，已打码</p>
+    </div>
+  </section>
 
-<h2>联系</h2>
-<p>邮箱：<a href="mailto:douzifox@gmail.com">douzifox@gmail.com</a></p>
+  <section class="feature flip">
+    <div class="text">
+      <h2>一张张看过，<br>告诉你它是什么</h2>
+      <p>狐豆豆不只是找关键词：它会看版面，认出聊天气泡、网页地址栏、各个 App 的底部标签；会验证号码，银行卡号算校验规则，身份证号核对校验码；字少的截图也能看图分类。</p>
+      <p>截图按「该拿它怎么办」分好：隐私、社交、文字、其他，每一类都附一句建议。<strong>它不替你决定什么重要，删不删你说了算。</strong></p>
+      <p>隐私这一类，它宁可多抓几张让你看一眼，也不想漏掉一张。认错了，换个分类就好，它会记住。</p>
+    </div>
+    <div>
+      <img class="phone" src="assets/shot-swipe.jpg" alt="整理页：左滑丢弃、右滑收藏，下面写着分类依据">
+      <p class="caption">图中是演示数据</p>
+    </div>
+  </section>
 
-<div class="en" lang="en">
-<h1>FoxPix</h1>
-<p class="sub">Take your private stuff out of the camera roll and lock it up. Sort screenshots, find IDs and cards, keep them in a Face ID vault. All on your phone.</p>
-<p>FoxPix (狐理狐图) is an iPhone app (iOS 17 or later). It reads the text in your screenshots on the phone, sorts them into categories and helps you pick the ones to delete. It can also go through your whole photo library to find photos of IDs and bank cards, plus duplicates. Logins, passwords and card numbers go into a vault you unlock with Face ID, with AutoFill on login fields. No sign-up, no server, nothing uploaded. Free to download; the full version is a one-time purchase.</p>
-<p><a class="get" href="https://apps.apple.com/app/id6821953556">Download on the App Store</a></p>
-<div class="card"><p class="q">Too many screenshots on my iPhone. How do I clean them up?</p><p>Open FoxPix and tap Scan screenshots. It reads the text of each one on the phone and sorts them into categories like personal info and logins, chats, shopping and delivery, QR codes and web pages. Then swipe through: keep the ones you want in matching albums, drop the rest in the basket, and tap Apply to delete them at once. iOS asks you to confirm, and deleted photos stay in Recently Deleted for 30 days.</p></div>
-<div class="card"><p class="q">How do I find photos of my ID or bank cards in the camera roll?</p><p>Switch to Whole Library at the top. FoxPix goes through every photo and picks out IDs, bank cards and images with card or account numbers, and finds duplicates too. Save the numbers you need to the vault, then delete the originals.</p></div>
-<div class="card"><p class="q">How is it different from the built-in Photos app?</p><p>Photos can search text in images, but it doesn't sort screenshots by what they're for, pick out the ones to delete, or give you a locked place for IDs and passwords. FoxPix does exactly that, all on the phone.</p></div>
-<div class="card"><p class="q">Does it upload my screenshots?</p><p>No. Recognition, sorting and the vault all run on-device; the app has no server. It works in Airplane Mode. See the <a href="privacy.html">privacy policy</a>.</p></div>
-<div class="card"><p class="q">Why full photo access?</p><p>Only full access can find every screenshot and delete the ones you discard. Deletion always happens after you tap Apply and confirm the system dialog; deleted photos stay in Recently Deleted for 30 days.</p></div>
-<div class="card"><p class="q">Where are vault items stored?</p><p>In the iOS Keychain. They sync between your own devices through iCloud Keychain (end-to-end encrypted) by default; you can turn that off in Settings.</p></div>
-<div class="card"><p class="q">How do I enable AutoFill?</p><p>iOS Settings → Passwords → Password Options (or AutoFill Passwords and Passkeys) → turn on FoxPix. Suggestions then appear above login fields; Face ID fills them.</p></div>
-<div class="card"><p class="q">What's free?</p><p>Scanning, sorting, swiping and the basket are free; applying the basket is limited to 500 photos in total and the vault to 3 items. The full version is a one-time purchase: no subscription, no account. Tap Restore Purchases on a new phone.</p></div>
-<div class="card"><p class="q">Which password files can I import?</p><p>Vault → + → Import from a file, then pick the CSV exported by your other password app: Apple Passwords, 1Password, Bitwarden, Chrome, Edge and Firefox are recognized; any file with title, URL, username and password columns works too. Delete the file afterwards; the import page has a button for it.</p></div>
-<h2>Contact</h2>
-<p>Email: <a href="mailto:douzifox@gmail.com">douzifox@gmail.com</a></p>
+  <section class="feature">
+    <div class="text">
+      <h2>认出来，锁起来，<br>要用直接填</h2>
+      <p>截图里的卡号、账号密码、证件、地址、Wi-Fi，一键存进保险箱，以后不用再翻图、再识别。</p>
+      <ul class="points">
+        <li>要解锁才能看，隐藏的内容（密码、安全码）再确认一次</li>
+        <li>登录时，账号密码直接出现在键盘上方，解锁就填</li>
+        <li>复制出去的内容只能在这台手机上粘贴，到时间自动清掉</li>
+        <li>也能从其他密码 App 导出的文件导入</li>
+      </ul>
+    </div>
+    <div class="phones">
+      <img class="phone" src="assets/shot-vault.jpg" alt="保险箱列表：登录、接口密钥、银行卡、地址、Wi-Fi">
+      <img class="phone" src="assets/shot-vault-item.jpg" alt="保险箱里的一条登录信息，密码隐藏">
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <div class="text">
+      <h2>存好了，<br>原图就能放心删</h2>
+      <p>左滑丢弃、右滑收藏，定好的都先放进篮子。最后点一次「应用」，系统再确认一次，才真的删除。删掉的照片在「最近删除」里留 30 天，随时能找回。</p>
+      <p>收藏的截图按分类放进相簿，以后要找，一眼就到。</p>
+    </div>
+    <div>
+      <img class="phone" src="assets/shot-basket.jpg" alt="篮子：待丢弃和待收藏的截图">
+      <p class="caption">图中是演示数据</p>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="text">
+      <h2>不只是截图</h2>
+      <p>切到「全相册」，狐豆豆会把所有照片翻一遍：拍过的身份证、银行卡、带账号的照片挑出来，一模一样和几乎一样的重复照片也找出来，帮你腾出 iCloud 空间。</p>
+      <p>照片先缩成小图过一遍，像证件、上面有成块文字的才认真识字。随时能停，下次从没看过的接着来。</p>
+    </div>
+    <div>
+      <img class="phone" src="assets/shot-library.jpg" alt="全相册：有隐私的照片、完全一样的、几乎一样的">
+      <p class="caption">图中是演示数据</p>
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <div class="text">
+      <h2>全在你的手机上</h2>
+      <ul class="points">
+        <li>识字、分类、保险箱，都在 iPhone 本机完成，App 没有服务器，开飞行模式也能用</li>
+        <li>不用注册，没有账号，不收集任何图片和文字</li>
+        <li>保险箱存在 iPhone 自带的钥匙串里，跟系统存密码是同一套；同步到你的其他设备时端到端加密，连苹果也看不到</li>
+        <li>删除永远要你自己点、系统再确认</li>
+      </ul>
+      <p style="margin-top:14px"><a href="privacy.html">隐私政策</a></p>
+    </div>
+    <div>
+      <img class="side-fox" src="assets/fox-lock.png" alt="狐豆豆抱着小锁">
+    </div>
+  </section>
+
+  <div class="story">
+    <img src="assets/fox-shy.png" alt="狐豆豆捂着眼睛">
+    <div>
+      <h2>狐豆豆是怎么来的</h2>
+      <p>作者的相册里攒了 3000 多张截图：银行卡号、收款账户、只出现一次的 access token、想珍藏的聊天记录……每次要用都得翻半天，再靠系统识别一遍字，iCloud 也快满了。</p>
+      <p>更让她不安的是，这些图跟着相册同步到了好几个云盘。找过别的整理 App，分类总是不合心意，于是她自己做了一个，就有了狐豆豆：替她看完每一张截图，把隐私收进保险箱，看过的图一张都不带出这台手机。</p>
+    </div>
+  </div>
+
+  <section class="faq">
+    <h2>常见问题</h2>
+    <div class="card"><p class="q">它会上传我的截图吗？</p><p>不会。识字、分类、保险箱都在手机上完成，App 没有服务器，开飞行模式也能用。详见<a href="privacy.html">隐私政策</a>。</p></div>
+    <div class="card"><p class="q">为什么要「完整相册权限」？</p><p>只有完整权限才能找到所有截图、把丢弃的照片删掉。删除永远要你先点「应用」再确认系统弹窗，删掉的进「最近删除」，30 天内能找回。</p></div>
+    <div class="card"><p class="q">保险箱的东西存在哪？</p><p>iOS 系统钥匙串。默认随你的 Apple 账户在你的设备间同步（端到端加密），设置里能关。</p></div>
+    <div class="card"><p class="q">自动填充怎么开？</p><p>系统设置 → 密码 → 密码选项（或「自动填充密码和通行密钥」）→ 勾上「狐理狐图」。之后登录框上方会出现狐豆豆的建议，解锁就填。</p></div>
+    <div class="card"><p class="q">能导入哪些密码文件？</p><p>保险箱 → + → 「从文件导入」，选别的密码 App 导出的 CSV：苹果「密码」、1Password、Bitwarden、Chrome、Edge、Firefox 都认，别的只要有标题、网址、账号、密码几列也能读。导完记得把文件删掉，导入页上有按钮。</p></div>
+    <div class="card"><p class="q">认错了怎么办？</p><p>截图换个分类就好；全相册里认错的照片点「不算隐私」，狐豆豆会记住。欢迎把认错的截图发到下面的邮箱，我们按它改规则。</p></div>
+    <div class="card"><p class="q">跟 iPhone 自带的「照片」有什么不一样？</p><p>「照片」能搜到图里的字，但不会按用途把截图分好、帮你挑出该删的，也没有一个要解锁才能看的地方放证件和密码。狐理狐图专门做这几件事，而且全在手机上完成。</p></div>
+  </section>
+
+  <footer>
+    <span>狐理狐图 FoxPix · <a href="mailto:douzifox@gmail.com">douzifox@gmail.com</a></span>
+    <span><a href="privacy.html">隐私政策</a> · <a href="en/" lang="en">English</a></span>
+  </footer>
 </div>
-</main>
 </body>
 </html>
