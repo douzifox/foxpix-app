@@ -92,6 +92,8 @@
   .big-number { font-size: 56px; font-weight: 800; color: var(--primary); line-height: 1.1; margin: 8px 0 4px; }
   ul.points { list-style: none; padding: 0; margin: 8px 0 0; }
   ul.points li { position: relative; padding-left: 26px; margin: 8px 0; color: var(--sub); }
+  ul.points li strong { color: var(--text); }
+  ul.points + p { margin-top: 14px; }
   ul.points li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 9px; height: 9px; border-radius: 50%; background: var(--primary); }
   .side-fox { width: min(260px, 70%); margin: 0 auto; }
 
@@ -138,7 +140,7 @@
       <h1 class="zh" lang="zh-Hans">把相册里的隐私，<br>收好。</h1>
       <h1 class="en" lang="en">Take the private stuff <br>out of your camera roll.</h1>
       <p class="lead zh" lang="zh-Hans">狐理狐图（FoxPix）是一款 iPhone App。它帮你整理截图，找出里面的证件、银行卡和账号密码，锁进只有你能打开的保险箱，登录时还能自动填充。全在手机上完成，不上传。</p>
-      <p class="lead en" lang="en">FoxPix (狐理狐图) is an iPhone app. It sorts your screenshots, finds the IDs, bank cards and logins in them, and locks them in a vault only you can open, with AutoFill when you sign in. Everything happens on your phone. Nothing is uploaded.</p>
+      <p class="lead en" lang="en">FoxPix (狐理狐图) is an iPhone app. It sorts your screenshots and finds the IDs, bank cards and logins hiding in them. Lock them in a vault only you can open, with AutoFill when you sign in. Everything happens on your phone. Nothing is uploaded.</p>
       <div class="download">
         <div class="qr">
           <img class="zh" src="assets/qr-appstore-cn.png" alt="App Store 下载二维码">
@@ -163,9 +165,9 @@
       <p class="en" lang="en">Card numbers to fill in, account details to send someone, an API key a site shows only once… one quick screenshot and it sits in your camera roll, then syncs to iCloud and other cloud drives as-is, as readable as plain text.</p>
       <p class="zh" lang="zh-Hans">狐理狐图的作者第一次扫自己的相册：</p>
       <p class="en" lang="en">The first time the developer scanned her own camera roll:</p>
-      <div class="big-number">238 / 3089</div>
-      <p class="zh" lang="zh-Hans"><strong>3089 张截图里，有 238 张带着隐私。</strong></p>
-      <p class="en" lang="en"><strong>238 of 3,089 screenshots held private information.</strong></p>
+      <div class="big-number">1 / 13</div>
+      <p class="zh" lang="zh-Hans"><strong>每 13 张截图里，就有 1 张藏着隐私。</strong><br>3089 张截图里，狐豆豆找出了 238 张。</p>
+      <p class="en" lang="en"><strong>1 in 13 screenshots held private information.</strong><br>Doudou found 238 among 3,089.</p>
     </div>
     <div>
       <img class="phone" src="assets/shot-real-privacy.jpg" alt="狐理狐图主页的隐私分类，已打码 / FoxPix home screen, Private category, blurred">
@@ -177,8 +179,18 @@
     <div class="text">
       <h2 class="zh" lang="zh-Hans">一张张看过，<br>告诉你它是什么</h2>
       <h2 class="en" lang="en">It looks at every screenshot and tells you what it is</h2>
-      <p class="zh" lang="zh-Hans">狐豆豆不只是找关键词：它会看版面，认出聊天气泡、网页地址栏、各个 App 的底部标签；会验证号码，银行卡号算校验规则，身份证号核对校验码；字少的截图也能看图分类。</p>
-      <p class="en" lang="en">Doudou does more than match keywords. It reads the layout: chat bubbles, browser address bars, the tab bars of familiar apps. It checks numbers: card numbers against their checksum, Chinese ID numbers against their check digit. Screenshots with little text are sorted by how they look.</p>
+      <p class="zh" lang="zh-Hans">狐豆豆不只是找关键词：</p>
+      <ul class="points zh" lang="zh-Hans">
+        <li><strong>看版面</strong>：认出聊天气泡、网页地址栏、App 底部标签</li>
+        <li><strong>验号码</strong>：银行卡号算校验规则，身份证号核对校验码</li>
+        <li><strong>看图片</strong>：字少的截图，看图来分</li>
+      </ul>
+      <p class="en" lang="en">Doudou does more than match keywords:</p>
+      <ul class="points en" lang="en">
+        <li><strong>Reads the layout</strong>: chat bubbles, address bars, app tab bars</li>
+        <li><strong>Checks numbers</strong>: card checksums, ID check digits</li>
+        <li><strong>Looks at the image</strong>: screenshots with little text are sorted by how they look</li>
+      </ul>
       <p class="zh" lang="zh-Hans">截图按「该拿它怎么办」分好：隐私、社交、文字、其他，每一类都附一句建议。<strong>它不替你决定什么重要，删不删你说了算。</strong></p>
       <p class="en" lang="en">Screenshots are grouped by what to do with them: Private, Social, Text and Other, each with a suggestion. <strong>It never decides what matters to you. Whether to delete is always your call.</strong></p>
       <p class="zh" lang="zh-Hans">隐私这一类，它宁可多抓几张让你看一眼，也不想漏掉一张。认错了，换个分类就好，它会记住。</p>
