@@ -1,4 +1,4 @@
-# 狐理狐图 (FoxPix)
+# 狐理狐图 (FoxStash)
 
 > An iPhone app that sorts screenshots, finds photos of IDs and bank cards in the camera roll, and keeps logins and card numbers in a vault unlocked with Face ID or the device passcode. Text recognition and sorting run on the phone; screenshots are never uploaded; no account, no server. Free to download, no subscription. An optional one-time in-app purchase unlocks unlimited use.
 
@@ -15,7 +15,7 @@
 
 - [App Store (US)](https://apps.apple.com/us/app/id6821953556)
 - [App Store 中国区](https://apps.apple.com/cn/app/id6821953556)
-- [Website and FAQ (Chinese and English)](https://foxpix.douzifox.com/)
-- [Questions on screenshots and photo privacy (Chinese and English)](https://foxpix.douzifox.com/qa.html): ID photos in the camera roll, organizing and bulk deleting screenshots, storing passwords, iCloud Photos encryption
-- [Privacy policy](https://foxpix.douzifox.com/privacy.html)
+- [Website and FAQ (Chinese and English)](https://foxstash.douzifox.com/)
+- [Questions on screenshots and photo privacy (Chinese and English)](https://foxstash.douzifox.com/qa.html): ID photos in the camera roll, organizing and bulk deleting screenshots, storing passwords, iCloud Photos encryption
+- [Privacy policy](https://foxstash.douzifox.com/privacy.html)
 - Contact: douzifox@gmail.com

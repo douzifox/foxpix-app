@@ -8,18 +8,18 @@
 import pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = "https://foxpix.douzifox.com"
+SITE = "https://foxstash.douzifox.com"
 
 PAGES = {
     "index.html": dict(
         path="",
-        title="FoxPix: screenshot organizer and private vault for iPhone",
-        og_title="FoxPix: Take the private stuff out of your camera roll",
+        title="FoxStash: screenshot organizer and private vault for iPhone",
+        og_title="FoxStash: Take the private stuff out of your camera roll",
         og_desc="Sorts your screenshots, finds IDs, bank cards and logins in them, and locks them in a vault that opens with Face ID or your passcode. Recognition runs on your iPhone; screenshots are never uploaded.",
     ),
     "qa.html": dict(
         path="qa.html",
-        title="Screenshots and photo privacy: common questions · FoxPix",
+        title="Screenshots and photo privacy: common questions · FoxStash",
         og_title="Screenshots and photo privacy: common questions",
         og_desc="Are ID photos in your camera roll safe? How to organize and bulk delete screenshots, and where to keep passwords. Straight answers first.",
     ),
