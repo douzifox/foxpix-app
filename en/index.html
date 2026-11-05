@@ -85,7 +85,7 @@
   /* 二维码用居中那版的大小（她 11-04：大小是说中间那版），放在下载按钮左边 */
   .qr { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--sub); font-size: 14px; }
   .qr img { width: 172px; height: 172px; border-radius: 18px; background: #fff; padding: 12px; border: 1px solid var(--line); box-shadow: var(--shadow); image-rendering: pixelated; }
-  .note { font-size: 14px; color: var(--sub); margin: 10px 0 0; }
+  .note { font-size: 14px; color: var(--sub); margin: 10px 0 0; text-align: center; text-wrap: balance; }
 
   /* 文字顶部和截图顶部对齐（她 11-04） */
   section.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; padding: 56px 0; border-top: 1px solid var(--line); }
@@ -159,7 +159,7 @@
         <div class="get-wrap">
           <a class="get zh" href="https://apps.apple.com/cn/app/id6821953556" target="_blank" rel="noopener">在 App Store 下载</a>
           <a class="get en" href="https://apps.apple.com/us/app/id6821953556" target="_blank" rel="noopener">Download on the App Store</a>
-          <p class="note"><span class="zh">iPhone · iOS 17 及以上<br>免费下载体验，完整版一次买断，没有订阅。</span><span class="en">iPhone · iOS 17 or later<br>Free to try. One-time purchase for the full version, no subscription.<br><!-- 改名过渡：新版本上架后删 -->Still listed as FoxPix on the App Store until our next update.</span></p>
+          <p class="note"><span class="zh">iPhone · iOS 17 及以上<br>免费下载体验，完整版一次买断，没有订阅。</span><span class="en">iPhone · iOS 17 or later<br>Free to try. One-time purchase, no subscription.<br><!-- 改名过渡：新版本上架后删 -->Still listed as FoxPix on the App Store<br>until our next update.</span></p>
         </div>
       </div>
     </div>
